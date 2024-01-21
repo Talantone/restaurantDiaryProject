@@ -15,6 +15,6 @@ source .env.dev //you can use .env or .env.dev file in this command
 docker-compose up
 ```
 
-#testing 
+# testing 
 Use command `make run_tests` or `python3 manage.py test .` to run tests
 To get test report type `make tests_report` or series of commands `coverage run --source='.' ./manage.py test .` and `coverage report`
