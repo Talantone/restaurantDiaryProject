@@ -9,7 +9,26 @@ run_prod:
 run_tests:
 	python3 manage.py test .
 tests_report:
-	coverage run --source='.' ./manage.py test .
+	ENV=dev coverage run --source='.' ./manage.py test .
 	coverage report
 
 .DEFAULT_GOAL := run_prod
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

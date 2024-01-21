@@ -27,8 +27,9 @@ if ENVIRONMENT == 'dev':
 elif ENVIRONMENT == 'prod':
     environ.Env.read_env('.env')
 else:
-    print("missing env variable")
-    sys.exit(1)
+    environ.Env.read_env('.env.dev')
+    #print("missing env variable")
+    #sys.exit(1)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
