@@ -26,7 +26,7 @@ CELERY_BROKER_URL=amqp://guest@localhost:5672//
 ```
 **Yes, files in the example have only different `DEBUG` option.**
 
-Makefile(`make`) and docker(`docker-compose up`).
+## Makefile(`make`) and docker(`docker-compose up`).  
 For Makefile-launch you can use `make run_dev`(to run development server) or `make run_prod` (to run production server)
 
 for docker-compose specify environment with commands:
