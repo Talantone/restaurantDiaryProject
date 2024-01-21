@@ -24,7 +24,8 @@ SITE_URL=http://localhost:8000
 EMAIL_HOST_USER=talantoner@gmail.com
 CELERY_BROKER_URL=amqp://guest@localhost:5672//
 ```
-**Yes, files in the example have only different `DEBUG` option**
+**Yes, files in the example have only different `DEBUG` option.**
+
 Makefile(`make`) and docker(`docker-compose up`).
 For Makefile-launch you can use `make run_dev`(to run development server) or `make run_prod` (to run production server)
 
