@@ -197,8 +197,8 @@ SWAGGER_SETTINGS = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST_USER = 'talantoner@gmail.com'
-CELERY_BROKER_URL = 'amqp://guest@localhost:5672//'
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+CELERY_BROKER_URL = env('CELERY_BROKER_URL')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
