@@ -1,0 +1,22 @@
+[
+{
+    "model": "diary.restaurant",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "name": "pivovar",
+        "place": "Prague",
+        "type": "pivo"
+    }
+},
+{
+    "model": "diary.restaurant",
+    "pk": 2,
+    "fields": {
+        "user": 5,
+        "name": "Apelace21",
+        "place": "Vinohrady",
+        "type": "European Kitchen"
+    }
+}
+]
