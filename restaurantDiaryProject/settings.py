@@ -27,7 +27,7 @@ if ENVIRONMENT == 'dev':
 elif ENVIRONMENT == 'prod':
     environ.Env.read_env('.env')
 else:
-    environ.Env.read_env('.env.dev')
+    environ.Env.read_env('.env.dev.git')
     #print("missing env variable")
     #sys.exit(1)
 
