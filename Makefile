@@ -1,3 +1,4 @@
+include .env .env.dev
 .PHONY: run_prod
 
 requirements:
@@ -11,6 +12,14 @@ run_tests:
 tests_report:
 	ENV=dev coverage run --source='.' ./manage.py test .
 	coverage report
+
+run_docker_prod:
+	export $(shell sed 's/=.*//' .env)
+	docker-compose build && docker-compose up
+
+run_docker_dev:
+	export $(shell sed 's/=.*//' .env.dev)
+	docker-compose build && docker-compose up
 
 .DEFAULT_GOAL := run_prod
 
