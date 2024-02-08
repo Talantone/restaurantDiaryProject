@@ -15,7 +15,8 @@ class RestaurantSerializerTestCase(TestCase):
             'name': 'pivo',
             'place': 'Prague',
             'type': 'pivo',
-            'average_evaluation': {'evaluation__avg': None}
+            'average_evaluation': {'evaluation__avg': None},
+            'total_spending': {'expense__sum': None}
         }
 
         self.assertEqual(expected_data, data)
