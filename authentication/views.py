@@ -41,7 +41,7 @@ class ResetPasswordView(generics.UpdateAPIView):
             serializer = self.serializer_class(user, request.data, partial=partial)
             serializer.is_valid(raise_exception=True)
             self.perform_update(serializer, user)
-            return Response(request.data, status=status.HTTP_200_OK)
+            return Response(status=status.HTTP_200_OK)
 
     def perform_update(self, serializer, user):
         serializer.save(user)

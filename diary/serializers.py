@@ -16,9 +16,12 @@ class RestaurantSerializer(serializers.ModelSerializer):
     def get_average_evaluation(self, obj):
         return obj.average_evaluation
 
+    def get_total_spending(self, obj):
+        return obj.total_spending
+
     class Meta:
         model = Restaurant
-        fields = ('name', 'place', 'type', 'average_evaluation')
+        fields = ('name', 'place', 'type', 'average_evaluation', 'total_spending')
 
 
 class VisitSerializer(serializers.ModelSerializer):

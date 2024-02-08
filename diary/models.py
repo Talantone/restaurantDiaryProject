@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Avg
+from django.db.models import Avg, Sum
 
 
 class Restaurant(models.Model):
@@ -14,6 +14,12 @@ class Restaurant(models.Model):
         if hasattr(self, '_average_evaluation'):
             return self._average_evaluation
         return self.visit_set.aggregate(Avg('evaluation'))
+
+    @property
+    def total_spending(self):
+        if hasattr(self, '_total_spending'):
+            return self.total_spending
+        return self.visit_set.aggregate(Sum('expense'))
 
     def __str__(self):
         return self.name

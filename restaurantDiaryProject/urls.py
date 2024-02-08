@@ -46,5 +46,6 @@ urlpatterns = [
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('api/', include('diary.urls'), name='api/diary'),
     path('api/', include('authentication.urls'), name='api/authentication')
+
 ]
 
