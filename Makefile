@@ -15,11 +15,13 @@ tests_report:
 
 run_docker_prod:
 	export $(shell sed 's/=.*//' .env)
-	docker-compose build && docker-compose up
+	docker-compose build
+	docker-compose up
 
 run_docker_dev:
 	export $(shell sed 's/=.*//' .env.dev)
-	docker-compose build && docker-compose up
+	docker-compose build
+	docker-compose up
 
 .DEFAULT_GOAL := run_prod
 
