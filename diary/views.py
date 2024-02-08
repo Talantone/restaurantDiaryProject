@@ -24,7 +24,7 @@ class RestaurantAPICreate(generics.CreateAPIView):
 class RestaurantAPIList(generics.ListAPIView):
     serializer_class = RestaurantSerializer
     queryset = Restaurant.objects.all()
-    permission_classes = (IsOwner,)
+    permission_classes = (IsOwner, IsAuthenticated)
 
     def get_queryset(self):
         queryset = self.queryset.filter(user=self.request.user.id)
