@@ -29,6 +29,8 @@ CELERY_BROKER_URL=amqp://guest@localhost:5672//
 ## Makefile(`make`) and docker(`docker-compose up`).  
 For Makefile-launch you can use `make run_dev`(to run development server) or `make run_prod` (to run production server)
 
+You can also run docker-compose from makefile using `make run_docker_prod` of `make run_docker_dev`
+
 for docker-compose specify environment with commands:
 ```
 docker-compose build
